@@ -1,6 +1,6 @@
 import { useQuery } from '@tanstack/react-query';
 import { router } from 'expo-router';
-import { ActivityIndicator, Pressable, ScrollView, Text, View } from 'react-native';
+import { ActivityIndicator, FlatList, Pressable, ScrollView, Text, View } from 'react-native';
 
 // React Query + Flatlist + Stack
 // 게시판 뿌리기
@@ -43,31 +43,61 @@ export default function index() {
             </View>
         )
     }
-    const postList = posts?.map((post, i) => (
-        <Pressable
-            key={i}
-            className='
-                p-4 m-4 bg-gray-50
-                border border-gray-200
-                rounded-xl active:bg-gray-300
-            '
-            onPress={() => {
-                router.push({
-                    pathname: `/stack/${post.id}` as any,
-                })
-            }}
-        >
-            <Text className='font-semibold text-gray-900' numberOfLines={1}>
-                {post.id}번, {post.title}
-            </Text>
-        </Pressable>
-    ))
+    // const postList = posts?.map((post, i) => (
+    //     <Pressable
+    //         key={i}
+    //         className='
+    //             p-4 m-4 bg-gray-50
+    //             border border-gray-200
+    //             rounded-xl active:bg-gray-300
+    //         '
+    //         onPress={() => {
+    //             router.push({
+    //                 pathname: `/stack/${post.id}` as any,
+    //             })
+    //         }}
+    //     >
+    //         <Text className='font-semibold text-gray-900' numberOfLines={1}>
+    //             {post.id}번, {post.title}
+    //         </Text>
+    //     </Pressable>
+    // ))
 
 
     return (
         <ScrollView>
             <Text>Post 게시판</Text>
-            {postList}
+            <FlatList
+                data={posts}
+                keyExtractor={(item) => item.id.toString()}
+                renderItem={({item}: {item: Post}) => (
+                    <Pressable
+                        className='
+                            p-4 m-4 bg-gray-50
+                            border border-gray-200
+                            rounded-xl active:bg-gray-300
+                        '
+                        onPress={() => {
+                            router.push({
+                                pathname: "/flatlist/[id]",
+                                params: {
+                                    id: item.id,
+                                    title: item.title,
+                                    body: item.body
+                                }
+                            })
+                        }}
+                    >
+                        <Text
+                            className='text-lg font-bold text-gray-800'
+                        >{item.title}</Text>
+                        <Text
+                            className='text-gray-500 text-sm mt-1'
+                        >{item.body}</Text>
+                    </Pressable>
+                )}
+            />
+
         </ScrollView>
     )
 }

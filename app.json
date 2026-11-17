@@ -1,7 +1,7 @@
 {
   "expo": {
     "name": "workspace",
-    "slug": "workspace",
+    "slug": "myapp",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
@@ -17,7 +17,12 @@
         "backgroundImage": "./assets/images/android-icon-background.png",
         "monochromeImage": "./assets/images/android-icon-monochrome.png"
       },
-      "predictiveBackGestureEnabled": false
+      "predictiveBackGestureEnabled": false,
+      "permissions": [
+        "android.permission.RECORD_AUDIO",
+        "android.permission.CAMERA"
+      ],
+      "package": "com.shoh03.myapp"
     },
     "web": {
       "output": "server",
@@ -32,11 +37,53 @@
           "image": "./assets/images/splash-icon.png",
           "imageWidth": 76
         }
+      ],
+      "expo-secure-store",
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "프로필 사진과 게시물 등록을 위해 갤러리 접근 권한이 필요합니다.",
+          "cameraPermission": "직접 사진을 촬영하여 업로드하려면 카메라 접근 권환이 필요합니다."
+        }
+      ],
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "직접 사진을 촬영하여 업로드하려면 카메라 접근 권환이 필요합니다."
+        }
+      ],
+      [
+        "expo-notifications",
+        {
+          "icon": "./assets/images/icon02.png",
+          "color": "#ffffff",
+          "sounds": []
+        }
+      ],
+      [
+        "expo-location",
+        {
+          "locationAlwaysAndWhenInUsePermission": "주변 장소 검색 및 위치 기반 서비스를 제공하려면 위치 정보 권한이 필요합니다."
+        }
+      ],
+      [
+        "expo-audio",
+        {
+          "microphonePermission": "오디오 녹음 및 음석 메세지 기능을 사용하기 위해 마이크 접근 권한이 필요합니다.",
+          "enableBackgroundPlayback": true,
+          "enableBackgroundRecording": false
+        }
       ]
     ],
     "experiments": {
       "typedRoutes": true,
       "reactCompiler": true
-    }
+    },
+    "extra": {
+      "eas": {
+        "projectId": "45222344-1661-4c0d-8716-66b27feb6c6f"
+      }
+    },
+    "owner": "shoh03"
   }
 }

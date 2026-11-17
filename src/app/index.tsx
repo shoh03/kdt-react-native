@@ -1,6 +1,6 @@
-import { Redirect, router } from "expo-router";
-import { Pressable, Text, TouchableOpacity, View } from "react-native";
-import { cn } from "./lib/utils";
+import { router } from "expo-router";
+import { Pressable, ScrollView, Text, TouchableOpacity } from "react-native";
+import { cn } from "../lib/utils";
 
 
 // TouchableOpacity == a
@@ -12,7 +12,14 @@ export default function HomeScreen() {
     const tags = [
         "view",
         "flatlist",
-        "stack"
+        "stack",
+        "infinite",
+        "zustand",
+        "camera",
+        "notification01",
+        "notification02",
+        "location",
+        "audio"
     ]
 
     const tagList = tags.map((tag, i) => (
@@ -26,7 +33,7 @@ export default function HomeScreen() {
     ))
 
     return (
-        <View>
+        <ScrollView>
             {/* 글자 클릭 */}
             <TouchableOpacity
                 className="m-4 p-3 bg-blue-500 rounded-lg"
@@ -36,7 +43,7 @@ export default function HomeScreen() {
             </TouchableOpacity>
 
             {tagList}
-        </View>
+        </ScrollView>
     )
     
     // return <Redirect href="/home" />

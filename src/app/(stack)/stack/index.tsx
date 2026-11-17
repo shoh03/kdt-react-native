@@ -100,4 +100,13 @@ export default function index() {
 
         </ScrollView>
     )
+
+// Flatlist로 변경, 무한스크롤
+
+
+
 }
+
+
+
+

@@ -10,18 +10,18 @@ interface LocationData {
 
 export default function index() {
 
-    const [statusMessage, setstatusMessage] = useState<string>("버튼을 눌러서 위치 정보를 가져오세요.")
-    const [locationData, setlocationData] = useState<LocationData | null>(null)
+    const [statusMessage, setStatusMessage] = useState<string>("버튼을 눌러서 위치 정보를 가져오세요.")
+    const [locationData, setLocationData] = useState<LocationData | null>(null)
 
     const buttonStyle = "m-4 p-3 bg-blue-500 rounded-lg"
     const textStyle = "flex justify-center text-white"
 
     const getLocation = async () => {
-        setstatusMessage("권한 확인중...")
+        setStatusMessage("권한 확인중...")
 
         const {status} = await Location.requestForegroundPermissionsAsync()
         if(status !== "granted") {
-            setstatusMessage("위치 권한이 거부되었습니다.")
+            setStatusMessage("위치 권한이 거부되었습니다.")
             return;
         }
 
@@ -30,8 +30,8 @@ export default function index() {
         })
 
         const { latitude, longitude} = location.coords;
-        setlocationData({latitude, longitude})
-        setstatusMessage("위치 정보를 성공적으로 가져왔습니다.")
+        setLocationData({latitude, longitude})
+        setStatusMessage("위치 정보를 성공적으로 가져왔습니다.")
     }
 
     return (

@@ -19,7 +19,10 @@ export default function HomeScreen() {
         "notification01",
         "notification02",
         "location",
-        "audio"
+        "audio",
+        "haptics",
+        "files",
+        "video"
     ]
 
     const tagList = tags.map((tag, i) => (

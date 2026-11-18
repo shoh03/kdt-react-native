@@ -663,7 +663,7 @@
   dependencies:
     node-forge "^1.4.0"
 
-"@expo/config-plugins@~58.0.13":
+"@expo/config-plugins@^58.0.13", "@expo/config-plugins@~58.0.13":
   version "58.0.13"
   resolved "https://registry.npmjs.org/@expo/config-plugins/-/config-plugins-58.0.13.tgz"
   integrity sha512-Vbkt0vpIJ9z+oCFr2simtfuiPxdpIovDgYnzenC9z7jX0rlo8nTLGQky+q+SJdovIbyymGAO45UR0YqwLgbvKw==
@@ -2155,10 +2155,20 @@ expo-device@~58.0.5:
   dependencies:
     ua-parser-js "^0.7.33"
 
+expo-document-picker@~58.0.5:
+  version "58.0.5"
+  resolved "https://registry.yarnpkg.com/expo-document-picker/-/expo-document-picker-58.0.5.tgz#7b8f76d8a3513aeb035346dc03816d590c9902b0"
+  integrity sha512-DHv8GhjDwu2BbDWhV2j52iaqwWsA9P7n5nAwreiKRGQSxv0wpF/C0Cqpqj1B72io8E2KXddwxxKPWVPlV/kgtA==
+
 expo-file-system@~58.0.13:
   version "58.0.13"
   resolved "https://registry.npmjs.org/expo-file-system/-/expo-file-system-58.0.13.tgz"
   integrity sha512-+/1aFErkawyky5UdWI06zYeO2DeHUnfaWnYHeiI8M8Z/sB6L66gI3WUxqtvUvKJoaM0Ti1CximD3x3JwteLYIg==
+
+expo-file-system@~58.0.14:
+  version "58.0.14"
+  resolved "https://registry.yarnpkg.com/expo-file-system/-/expo-file-system-58.0.14.tgz#87cd00ee9300531b2537b90debd124b8e781562b"
+  integrity sha512-VK67RQPDmWRHGbvpmPY5MeA1Ulw1LiyKs4KIN8na/q7SlkxYuPPR8biWsyX1S1/8XAHm6y2txUnYjCKh9l93lQ==
 
 expo-font@~58.0.12:
   version "58.0.12"
@@ -2169,6 +2179,11 @@ expo-glass-effect@^58.0.5, expo-glass-effect@~58.0.5:
   version "58.0.5"
   resolved "https://registry.npmjs.org/expo-glass-effect/-/expo-glass-effect-58.0.5.tgz"
   integrity sha512-PkL1X/r0cTs6NG47Xp3TxRvtqSeRmPYhPOHp3GDmZB2oOxpjXge6qLi/bSSv0asFWqf+MLOlXZ+hq2Imuh0Z1g==
+
+expo-haptics@~58.0.8:
+  version "58.0.8"
+  resolved "https://registry.yarnpkg.com/expo-haptics/-/expo-haptics-58.0.8.tgz#f884ca7951b44414858f2c913095c2a9fb36f69c"
+  integrity sha512-hxW9LoJQhAJ4hRlGx0DZ10ncs2NFqC/0nfKSnGy1PcpH6e8dJ4/oJO9eOcAG/vFg8k5oonbZkWL7RK9G3729Tg==
 
 expo-image-loader@~58.0.3:
   version "58.0.3"
@@ -2298,6 +2313,15 @@ expo-server@^58.1.0:
   resolved "https://registry.npmjs.org/expo-server/-/expo-server-58.1.0.tgz"
   integrity sha512-jo7I6uHnP5OQYKx3+7lbpdVVnOEwFj2ryDkQdauUQSwgh2HuMUkiFXWUIVe01ts6DLRoff5U0Tv+uNb3CMq/kw==
 
+expo-sharing@~58.0.23:
+  version "58.0.23"
+  resolved "https://registry.yarnpkg.com/expo-sharing/-/expo-sharing-58.0.23.tgz#1ed28e2ea5dbe4028747bd77fb5fa3be31a4d2d1"
+  integrity sha512-TRu/CM7s4caW0TcVurO49468jtHAraoRVa4et5lHWKd18/5tfFMOA3ZAxsEezBaI8ehcLXhWc9FPBSxtYY6GYQ==
+  dependencies:
+    "@expo/config-plugins" "^58.0.13"
+    "@expo/config-types" "^58.0.3"
+    "@expo/plist" "^0.10.2"
+
 expo-splash-screen@~58.0.14:
   version "58.0.14"
   resolved "https://registry.npmjs.org/expo-splash-screen/-/expo-splash-screen-58.0.14.tgz"
@@ -2327,6 +2351,11 @@ expo-system-ui@~58.0.7:
   dependencies:
     "@react-native/normalize-colors" "0.88.1"
     debug "^4.3.2"
+
+expo-video@~58.0.14:
+  version "58.0.14"
+  resolved "https://registry.yarnpkg.com/expo-video/-/expo-video-58.0.14.tgz#6d083f8c23d9b6c090de02c43626babc8fd69378"
+  integrity sha512-PYB85kvyvTN8E40TUOgHTI+nucp9O2aFYf4IULZUE71l0iW+YmXIAcp+ZwsLuMSYtdt5QRPqdpdvbyXWeEZLPw==
 
 expo-web-browser@~58.0.8:
   version "58.0.8"
